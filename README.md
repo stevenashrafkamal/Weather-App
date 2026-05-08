@@ -1,5 +1,7 @@
 # 🌦️ Modern Weather Dashboard & Analytics Tool
 
+**🔗 Live Demo:** [https://stevenashrafkamal.github.io/Weather-App/](https://stevenashrafkamal.github.io/Weather-App/)
+
 A high-performance, responsive web application for real-time weather monitoring and city comparison. Built with a focus on clean UI/UX and efficient asynchronous data handling.
 
 ---
@@ -35,7 +37,7 @@ The **Modern Weather Dashboard** is more than just a weather app; it's a tool de
 ```text
 ├── index.html          # Application structure & UI components
 ├── style.css           # Custom styling and responsive layouts
-└── script.js          # Core logic (API handling, DOM manipulation, Storage)
+└── script.js           # Core logic (API handling, DOM manipulation, Storage)
 ```
 
 ## ⚙️ How to Run
