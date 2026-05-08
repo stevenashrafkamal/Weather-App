@@ -36,3 +36,33 @@ The **Modern Weather Dashboard** is more than just a weather app; it's a tool de
 ├── index.html          # Application structure & UI components
 ├── style.css           # Custom styling and responsive layouts
 └── script.js          # Core logic (API handling, DOM manipulation, Storage)
+```
+
+## ⚙️ How to Run
+Since this is a client-side application, no server-side installation (Node.js/Python) is required.
+
+Clone the Repository:
+
+Bash
+git clone [https://github.com/stevenashrafkamal/weather-dashboard.git](https://github.com/stevenashrafkamal/weather-dashboard.git)
+Open the App:
+Simply double-click index.html to launch the application in your default browser.
+
+##💡 Implementation Details (The "Why")
+Why Promise.all? Instead of waiting for the first city to load and then the second, we fire both requests together. This cuts the waiting time by 50%.
+
+Why wttr.in? Unlike other providers, it offers a clean JSON interface without the need for complex API key management, making it perfect for lightweight, high-speed applications.
+
+URL Encoding: All city names are processed via encodeURIComponent to support cities with spaces or special characters (e.g., "New York" or "São Paulo").
+
+## 🛣️ Future Roadmap
+[ ] Integration with OpenWeatherMap for 5-day forecasts.
+
+[ ] Geolocation API support to auto-detect user's current city.
+
+[ ] Dark Mode / Light Mode toggle.
+
+[ ] Detailed humidity and pressure metrics.
+
+## Developed with ❤️ by Steven Ashraf
+Computer Science Student @ Minia University
