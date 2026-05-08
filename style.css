@@ -1,4 +1,3 @@
-/* إعدادات الصفحة العامة */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #e0e7ff;
@@ -8,10 +7,8 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 20px;
-    /* إضافة مسافة للهواتف */
 }
 
-/* البطاقة الأساسية - تم تعديل العرض */
 .weather-card {
     background: white;
     padding: 2rem;
@@ -19,8 +16,8 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     width: 100%;
     max-width: 480px;
-    /* توسيع العرض ليناسب الجدول */
     text-align: center;
+    box-sizing: border-box;
 }
 
 h2,
@@ -30,7 +27,6 @@ h3 {
     margin-bottom: 20px;
 }
 
-/* تنسيق صناديق البحث والإدخال */
 .search-box,
 .inputs-row {
     display: flex;
@@ -40,20 +36,20 @@ h3 {
 
 input {
     flex: 1;
-    /* يأخذ المساحة المتاحة */
     padding: 12px;
     border: 1px solid #d1d5db;
     border-radius: 8px;
     outline: none;
     font-size: 14px;
     transition: border-color 0.3s;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 input:focus {
     border-color: #4f46e5;
 }
 
-/* تنسيق عام للأزرار */
 button {
     padding: 12px 20px;
     border: none;
@@ -64,7 +60,6 @@ button {
     transition: all 0.2s ease;
 }
 
-/* زر البحث */
 #searchBtn {
     background-color: #4f46e5;
     color: white;
@@ -74,7 +69,6 @@ button {
     background-color: #4338ca;
 }
 
-/* زر الحفظ */
 .save-btn {
     background-color: #fbbf24;
     color: #1f2937;
@@ -86,10 +80,8 @@ button {
     background-color: #f59e0b;
 }
 
-/* زر المقارنة الجديد */
 .action-btn {
     background-color: #111827;
-    /* لون داكن مميز */
     color: white;
     width: 100%;
 }
@@ -98,7 +90,6 @@ button {
     background-color: #374151;
 }
 
-/* منطقة عرض النتيجة */
 .weather-info {
     background-color: #f3f4f6;
     padding: 15px;
@@ -112,7 +103,6 @@ button {
     display: none;
 }
 
-/* قسم المفضلة */
 .favorites-section {
     margin-top: 25px;
     padding-top: 15px;
@@ -126,14 +116,11 @@ button {
     padding: 6px 12px;
     font-size: 0.85rem;
     border-radius: 20px;
-    /* شكل دائري */
 }
 
 .fav-btn:hover {
     background-color: #059669;
 }
-
-/* --- قسم المقارنة --- */
 
 .divider {
     border: 0;
@@ -146,7 +133,6 @@ button {
     text-align: center;
 }
 
-/* جدول المقارنة */
 .comp-table {
     width: 100%;
     margin-top: 20px;
@@ -156,6 +142,7 @@ button {
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid #e5e7eb;
+    table-layout: fixed;
 }
 
 .comp-table th {
@@ -163,6 +150,7 @@ button {
     color: white;
     padding: 12px;
     font-size: 0.95rem;
+    word-wrap: break-word;
 }
 
 .comp-table td {
@@ -171,9 +159,9 @@ button {
     text-align: center;
     font-weight: 600;
     color: #374151;
+    word-wrap: break-word;
 }
 
-/* تنسيق العمود الأوسط (العناوين) */
 .label-cell {
     color: #6b7280 !important;
     font-weight: normal !important;
@@ -184,14 +172,37 @@ button {
     border-right: 1px solid #e5e7eb;
 }
 
-/* ألوان التمييز للحرارة */
 .hot-temp {
     color: #ef4444;
 }
 
-/* أحمر */
 .cool-temp {
     color: #3b82f6;
 }
 
-/* أزرق */
+@media (max-width: 500px) {
+    .weather-card {
+        padding: 1.5rem;
+    }
+
+    .search-box,
+    .inputs-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    #searchBtn {
+        width: 100%;
+    }
+
+    .comp-table th,
+    .comp-table td {
+        padding: 8px 4px;
+        font-size: 0.8rem;
+    }
+
+    .label-cell {
+        width: 55px;
+        font-size: 0.75rem;
+    }
+}
