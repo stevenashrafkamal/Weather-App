@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="weather-card">
+        
+        <h2>🌤️ Weather App</h2>
+        
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name (Cairo)">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div id="weatherResult" class="hidden">
+            <h3 id="displayCityName">--</h3>
+            <div class="weather-info">
+                <p>Temperature: <span id="temp">--</span></p>
+                <p>Wind: <span id="wind">--</span></p>
+                <p>Description: <span id="desc">--</span></p>
+            </div>
+            
+            <button id="saveBtn" class="save-btn">⭐ Add to Favorites</button>
+        </div>
+
+        <div class="favorites-section">
+            <h4>Favorite Cities:</h4>
+            <div id="favList" class="fav-list">
+                </div>
+        </div>
+
+        <hr class="divider">
+        
+        <div class="comparison-section">
+            <h3>⚔️ Compare Cities</h3>
+            
+            <div class="inputs-row">
+                <input type="text" id="city1" placeholder="First City (e.g. Cairo)">
+                <input type="text" id="city2" placeholder="Second City (e.g. London)">
+            </div>
+            
+            <button id="compareBtn" class="action-btn">Compare</button>
+
+            <div id="comparisonResult" class="hidden">
+                <table class="comp-table">
+                    <thead>
+                        <tr>
+                            <th id="th-city1">City 1</th>
+                            <th>VS</th>
+                            <th id="th-city2">City 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="c1-temp">--</td>
+                            <td class="label-cell">🌡️ Temp</td>
+                            <td id="c2-temp">--</td>
+                        </tr>
+                        <tr>
+                            <td id="c1-wind">--</td>
+                            <td class="label-cell">💨 Wind</td>
+                            <td id="c2-wind">--</td>
+                        </tr>
+                        <tr>
+                            <td id="c1-desc">--</td>
+                            <td class="label-cell">☁️ Desc</td>
+                            <td id="c2-desc">--</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> 
+        </div> 
+    <script src="script.js"></script>
+</body>
+</html>
