@@ -1,5 +1,8 @@
 # 🌦️ Modern Weather Dashboard & Analytics Tool
 
+![weather Banner](weather.webp)
+
+
 **🔗 Live Demo:** [https://stevenashrafkamal.github.io/Weather-App/](https://stevenashrafkamal.github.io/Weather-App/)
 
 A high-performance, responsive web application for real-time weather monitoring and city comparison. Built with a focus on clean UI/UX and efficient asynchronous data handling.
